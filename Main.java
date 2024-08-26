@@ -38,7 +38,7 @@ public class Main {
         tratadorDevolucao.registrarDevolucao(atendente1, livro1);
         
         // Emitindo boleto de multa por atraso
-        tratadorDevolucao.emitirBoletoMulta(atendente1, 5); // 5 dias de atraso
+        tratadorDevolucao.emitirBoletoMulta(atendente1, livro2); // 5 dias de atraso
         
         // Consultando novamente o estado do livro após as operações
         tratadorCadastro.consultarLivro(1);

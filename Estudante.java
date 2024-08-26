@@ -23,6 +23,7 @@ public class Estudante extends Pessoa {
         if ("reservado".equals(livro.getEstado())) {
             livro.atualizarEstado("emprestado");
             System.out.println("Livro " + livro.getTitulo() + " emprestado com sucesso!");
+            System.out.println("Data de devolução: " + livro.getDataDevolucao());
         } else {
             System.out.println("Livro " + livro.getTitulo() + " não está reservado.");
         }
@@ -31,7 +32,9 @@ public class Estudante extends Pessoa {
     public void renovarEmprestimo(Livro livro) {
         if ("emprestado".equals(livro.getEstado())) {
             livro.atualizarEstado("renovado");
+            livro.atualizarEstado("emprestado");
             System.out.println("Empréstimo do livro " + livro.getTitulo() + " renovado com sucesso!");
+            System.out.println("Nova data de devolução: " + livro.getDataDevolucao());
         } else {
             System.out.println("Livro " + livro.getTitulo() + " não está emprestado ou já foi renovado.");
         }

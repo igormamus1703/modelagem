@@ -3,7 +3,7 @@ public class TratadorDeDevolucao {
         atendente.registrarDevolucao(livro);
     }
 
-    public void emitirBoletoMulta(Atendente atendente, int diasAtraso) {
-        atendente.emitirBoletoMulta(diasAtraso);
+    public void emitirBoletoMulta(Atendente atendente, Livro livro) {
+        atendente.emitirBoletoMulta(livro);
     }
 }
